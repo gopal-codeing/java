@@ -1,0 +1,74 @@
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| name               |
+| school             |
+| student            |
++--------------------+
+5 rows in set (0.08 sec)
+
+mysql> show table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> show tables;
+ERROR 1046 (3D000): No database selected
+mysql> show tables;
+ERROR 1046 (3D000): No database selected
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| name               |
+| school             |
+| student            |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> create database;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+mysql> create database EmployeeDetels;
+Query OK, 1 row affected (0.00 sec)
+
+mysql> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| employeedetels     |
+| mysql              |
+| name               |
+| school             |
+| student            |
++--------------------+
+6 rows in set (0.01 sec)
+
+mysql> use employeedetels;
+Database changed
+mysql> create table empolyee(name varchar(50),password varchar(50));
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> desc empolyee;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| name     | varchar(50) | YES  |     | NULL    |       |
+| password | varchar(50) | YES  |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+2 rows in set (0.06 sec)
+
+mysql>  insert into empolyee values('gopal','123');
+Query OK, 1 row affected (0.05 sec)
+
+mysql> select * from empolyee;
++-------+----------+
+| name  | password |
++-------+----------+
+| gopal | 123      |
++-------+----------+
+1 row in set (0.00 sec)
+
+mysql>
